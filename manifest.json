@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Snipe FOE extension",
+  "version": "1.0",
+  "description": "Extension to help you snipe FP on great buildings.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "48": "assets/icon.png"
+  },
+  "browser_action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "assets/icon.png"
+  },
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.forgeofempires.com/*"],
+      "js": ["src/content.js"]
+    }
+  ]
+}

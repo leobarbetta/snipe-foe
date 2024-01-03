@@ -5,7 +5,8 @@
   "description": "Extension to help you snipe FP on great buildings.",
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "clipboardWrite"
   ],
   "icons": {
     "48": "assets/icon.png"

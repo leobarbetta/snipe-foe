@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
       FPsToSnipe = FPsToSnipe + (Number(fpsDesiredPosition) / 2)
     }
 
+    FPsToSnipe = Math.ceil(FPsToSnipe); // Round up the value of FPsToSnipe
+
     navigator.clipboard.writeText(FPsToSnipe);
 
     document.getElementById('outputLabel').textContent = `FPs to snipe: ${FPsToSnipe}`;
